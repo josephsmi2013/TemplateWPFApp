@@ -21,7 +21,8 @@ Provides storage facilities for the solution
 12.	Next, create a new Visual Studio project. Search “blank solution” as the type
 13.	Browse to the parent folder of the folder created by GIT. Select OK
 14. Back in VS, select Team Explorer. Right click the new solution file and select for staging
-15. Once files are staged (bundled), they can be comitted using "Sync"
+15. Once files are staged (bundled), they can be commited locally using "Commit Staged"
+16. After local commit. Files can be syned to the repo using "Sync"
 16. Note: Syncing does a pull and then a push of staged files
 17. Note: A fetch will show you which files from the repo have changes without forcing a modification
 

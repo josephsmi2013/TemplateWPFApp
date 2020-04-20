@@ -62,7 +62,7 @@ Create public endpoints for retrieving and posting data to a custom application
 # Purpose
 Provides Web API documentation and ability to test the API
 # Steps
-* In Solution Explorer, right click “References”  “Manage Nuget Packages”
+* In Solution Explorer, right click “References” --> “Manage Nuget Packages”
 * Search for Swashbuckler (must be exact), choose to install, restart maybe required
 * Repeat, except this time use the “Updates” tab of Nuget Packages to install latest updates
 * May not want to Bootstrap 4.0 or later since I hear it take a lot of new configuration
@@ -71,13 +71,14 @@ Provides Web API documentation and ability to test the API
 * Run the solution, navigate to [AppURL:port]/swagger
 * Retrieve a token from the Auth section in order to test AuthTokenOperation.cs
 * Use the token in any API call to test the AuthOperationFilter.cs 
-* Remember the syntax is “Bearer ” [token] 
+* Remember the syntax is “Bearer ” + [Authtoken] 
+* Check In changes using Team Explorer (instructions above)
 
 # Create Database
 # Purpose
 Add a DB project to the solution for storing custom data in our application
 # Steps
-* Right click Solution and choose Add  Add New Project
+* Right click Solution and choose Add --> Add New Project
 * Search for “SQL Server database project”
 * Name the database project
 * Add new root folder “dbo” (schema name) to the Database project
@@ -88,6 +89,7 @@ Add a DB project to the solution for storing custom data in our application
 * Select ok. This should create the connection string
 * Give database a name. Can be same as database project name
 * Select “Save Profile As”, choose the “PublishLocations” folder. Keep filename the same.
-* Should be able to use the SQL Server Object browser to review now
+* Select "Publish". Should be able to use the SQL Server Object browser to review now
+* Check In changes using Team Explorer (instructions above)
 
 

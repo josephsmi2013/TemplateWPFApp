@@ -72,7 +72,7 @@ Provides Web API documentation and ability to test the API
 * Retrieve a token from the Auth section in order to test AuthTokenOperation.cs
 * Use the token in any API call to test the AuthOperationFilter.cs 
 * Remember the syntax is “Bearer ” + [Authtoken] 
-* Check In changes using Team Explorer (instructions above)
+* Merge changes using Team Explorer (instructions above)
 
 # Create Database
 # Purpose
@@ -90,6 +90,27 @@ Add a DB project to the solution for storing custom data in our application
 * Give database a name. Can be same as database project name
 * Select “Save Profile As”, choose the “PublishLocations” folder. Keep filename the same.
 * Select "Publish". Should be able to use the SQL Server Object browser to review now
-* Check In changes using Team Explorer (instructions above)
+* Merge changes using Team Explorer (instructions above)
 
+# Create WPF/MVVM
+# Purpose
+Adds a WPF project to support the user interface
+# Steps
+* Right click Solution and choose Add --> Add New Project
+* Search "WPF" and select the version for ASPN.Net
+* Name the project and select ok
+* Right-click WPF project and choose "Set as Startup Project"
+* Run the WPF project to see the base UI window
+* Note: The runtime debug tools can be turned off using Tools --> Options --> Debugging --> Show runtime tools in window
+* Note: The assembly name can be changed to be more user friendly. For example, WPFApp.exe
+* To do this, Modify the WPF project properties --> Application -- Assembly Name
+* Right-click "References" in WPF project and choose "Manage Nuget Packages"
+* Search for "Caliburn.Micro". This will add support for Models, Views and, ViewModels in WPF
+* Add 3 root level folders to the WPF project. "Views", "Models" and, "ViewModels"
+* Copy the class under "ViewModels" called "ShellViewModel.cs". This will launch the ShellView window
+* Copy the window under "Views" called "ShellView.xaml". This will replace the "mainWindow.xaml"
+* Copy the class under WPF root called "Bootstrapper". Used to setup Caliburn.Micro (launches the ShellViewModel)
+* Copy the App.xaml. This will load the "Bootstrapper.cs" as a resource into the WPF app
+* Delete the MainWindow.xaml. Build and rebuld solution. Run the app
+* Merge changes using Team Explorer (instructions above)
 
